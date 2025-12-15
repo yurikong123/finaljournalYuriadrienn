@@ -1,0 +1,184 @@
+/* Grid layout with subtle animation */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+/* Individual gallery boxes */
+.galleryBox {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+
+  border: 2px solid purple; /* ← purple border */
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+}
+
+
+/* Staggered animation delay for each item */
+.galleryBox:nth-child(1) { animation-delay: 0.1s; }
+.galleryBox:nth-child(2) { animation-delay: 0.2s; }
+.galleryBox:nth-child(3) { animation-delay: 0.3s; }
+.galleryBox:nth-child(4) { animation-delay: 0.4s; }
+/* Add more if you have more items */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.galleryBox:hover {
+  transform: translateY(-15px) rotateZ(-1deg);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+}
+
+/* Subtle overlay on hover */
+.galleryBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(0,0,0,0);
+  transition: background 0.4s ease;
+  
+}
+
+.galleryBox:hover::after {
+  background: rgba(0,0,0,0.1);
+}
+
+/* Image hover animation */
+.galleryBox img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+  
+  
+}
+
+.galleryBox:hover img {
+  transform: scale(1.08) rotateZ(-1deg);
+  filter: brightness(1.1) contrast(1.05);
+  
+}
+
+/* Caption style (always visible) */
+.galleryCaption {
+  margin: 0.7rem 0;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 1;          /* always visible */
+  transform: translateY(0); /* no animation */
+}
+/* Grid layout with subtle animation */
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+/* Individual gallery boxes */
+.galleryBox {
+  background: #f9f9f9;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.1);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  position: relative;
+  overflow: hidden;
+
+  /* Fade-in animation on load */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s forwards;
+}
+
+/* Staggered animation delay for each item */
+.galleryBox:nth-child(1) { animation-delay: 0.1s; }
+.galleryBox:nth-child(2) { animation-delay: 0.2s; }
+.galleryBox:nth-child(3) { animation-delay: 0.3s; }
+.galleryBox:nth-child(4) { animation-delay: 0.4s; }
+/* Add more if you have more items */
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effect */
+.galleryBox:hover {
+  transform: translateY(-15px) rotateZ(-1deg);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.2);
+}
+
+/* Subtle overlay on hover */
+.galleryBox::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: rgba(0,0,0,0);
+  transition: background 0.4s ease;
+}
+
+.galleryBox:hover::after {
+  background: rgba(0,0,0,0.1);
+}
+
+/* Image hover animation */
+.galleryBox img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.galleryBox:hover img {
+  transform: scale(1.08) rotateZ(-1deg);
+  filter: brightness(1.1) contrast(1.05);
+}
+
+/* Caption style (always visible) */
+.galleryCaption {
+  margin: 0.7rem 0;
+  font-weight: 1000;
+  font-size: 2rem;
+  /* remove color: #080707; */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

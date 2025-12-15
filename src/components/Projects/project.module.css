@@ -1,0 +1,208 @@
+.projects {
+	padding-top: 10rem;
+	margin: 0rem auto;
+	display: flex;
+	width: 80%;
+	align-items: center;
+	justify-content: space-evenly;
+	/* background-color: aqua; */
+	font-family: "Barlow Condensed";
+	/* background-color: aquamarine; */
+}
+/* .projectImg {
+	background-color: aqua;
+} */
+.projectImg img {
+	/* max-width: 30rem;	 */
+	height: 30rem;	
+	/* animation: renderFromLeft 0.5s ease forwards; */
+}
+.projectHeader {
+	width: 40%;
+	text-align: center;
+	font-weight: 600;
+	/* animation: renderFromRight 0.5s ease forwards; */
+}
+
+.projectHeader h1 {
+	font-size: 3rem;
+
+  
+}
+.projectHeader div {
+	margin-top: 2rem;
+	font-size: 1.8rem;
+}
+.projectHeading {
+	font-size: 3rem;
+	text-align: center;
+}
+.projectList {
+	display: flex;
+	flex-wrap: wrap;
+	/* background-color: aquamarine; */
+	gap: 1rem;
+	justify-content: center;
+	margin: 2rem auto;
+	width: 90%;
+}
+.moreProject {
+	display: flex;
+	justify-content: center;
+}
+@media (max-width: 768px) {
+	.projects {
+		margin: 0rem auto;
+		flex-direction: column;
+		width: 90%;
+	}
+	.projectImg img {
+		margin-top: 2rem;
+		height: 15rem;
+	}
+	.projectHeader {
+		width: 100%;
+	}
+	.projectHeader div {
+		margin-top: 1rem;
+		font-size: 1.5rem;
+	}
+}
+
+@media (max-width:768px) {
+    .app-content{
+        margin-top: 4rem;
+    }
+    
+}
+@keyframes renderFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes renderFromRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.carouselImage {
+  width: 150%;
+  max-width: 1000px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid #ddd;
+  margin-bottom: 2rem;
+  object-fit: cover;
+}
+
+.carouselSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0;  /* reduce top/bottom space */
+  box-sizing: border-box;
+}
+
+.swiper {
+  width: 80%;
+  max-width: 1100px;
+  padding-bottom: 4rem;
+}
+.carouselItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  padding: 3rem;
+  border-radius: 25px;
+  border: 2px solid transparent;
+  overflow: visible; 
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 0; /* keep content on top */
+}
+
+.carouselItem::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 25px;
+  background: linear-gradient(120deg,purple);
+  background-size: 200% 200%;
+  filter: blur(8px);
+  z-index: -1; /* behind the card */
+  opacity: 0;
+  pointer-events: none; /* allow clicks on content */
+  transition: opacity 0.3s ease;
+}
+
+.carouselItem:hover::before {
+  opacity: 1;
+  animation: softGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes softGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Text gradient with subtle animation */
+.carouselItem h2, .carouselItem p {
+  background: linear-gradient(90deg, #000000, #070606);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes textGlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+
+.carouselItem {
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(purple) border-box;
+  border: 4px solid transparent;
+}
+.carouselSection {
+  display: flex;
+  flex-direction: column;   /* stack children vertically */
+  align-items: center;      /* center horizontally */
+  padding-top: 1rem;        /* move section content slightly from top */
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: center;
+  /* remove color: #333; so inline style works */
+}
+
+.titleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
