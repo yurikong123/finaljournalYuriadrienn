@@ -21,7 +21,7 @@ import img15 from "./Davao.jpg";
 // Gallery items
 const galleryItems = [
   { id: 1, img: img1, title: "Lapu-Lapu Shrine" },
-  { id: 2, img: img2, title: "CodeChum" },
+  { id: 2, img: img2, title: "Somac Korean Buffet" },
   { id: 3, img: img3, title: "Cebu Institute of Technology Univesity" },
   { id: 4, img: img4, title: "Magellan's Cross" },
   { id: 5, img: img5, title: "Basilica del Santo Niño" },
