@@ -12,7 +12,7 @@ const initialThemeState={
 
 const themeSlice=createSlice({
     name:'theme',
-    initialState:initialThemeState,
+    initialState:initialThemeState, 
     reducers:{
         changeThemeColor(state,action){
             state.theme.color=action.payload;

@@ -1,44 +1,44 @@
 .contactFormCard {
-	margin: 2rem auto;
-	width: 50%;
-	/* background-color: aqua; */
+    margin: 2rem auto;
+    width: 50%;
+    /* background-color: aqua; */
 }
 .contactFormCard h1 {
-	text-align: left;
+    text-align: left;
     margin-left: 2rem;
-	font-size: 3rem;
+    font-size: 3rem;
 }
 .contactForm{
     flex: 1;
     width: 100%;
 }
 .Inputs {
-	background-color: inherit;
-	margin-left: 2rem;
-	border: none;
-	height: 4rem;
-	color: purple;
-	padding: 0px 20px;
-	font-size: 1.5rem;
-	font-weight: 700;
+    background-color: inherit;
+    margin-left: 2rem;
+    border: none;
+    height: 4rem;
+    color: purple;
+    padding: 0px 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
     border: 1px solid #ccc;
-	border-radius: 5px;
-	margin-top: 2rem;
+    border-radius: 5px;
+    margin-top: 2rem;
     width: auto;
     max-width: 100%;
 }
 .Inputs:focus {
-	outline: none;
-	border-color: #240370;
-	background-color: #e0d4fd;
+    outline: none;
+    border-color: #240370;
+    background-color: #e0d4fd;
 }
 .contactForm textarea {
     padding-top: 1rem;
-	/* width: 100%; */
-	height: 10rem;
+    /* width: 100%; */
+    height: 10rem;
     width: 20rem;
     max-width: 100%;
-	resize: none;
+    resize: none;
 }
 /* .Inputs:hover {
     background-color: #e0d4fd;
@@ -49,32 +49,40 @@
     margin-top: 1rem;
     margin-left: 2rem;
 }
+
+/* 📩 TARGETING THE BUTTON INSIDE THE FORM OUTSIDE THE BOX */
+.contactForm button,
+.contactForm input[type="submit"] {
+    background-color: #7b007a !important; /* Changes the box background */
+    color: #ffffff !important;            /* Changes the text color */
+}
+
 .invalidInput{
-	border: 1px solid #b40e0e;
-  background-color: #fddddd;
+    border: 1px solid #b40e0e;
+    background-color: #fddddd;
 }
 .sent .Inputs{
-	color:rgb(156, 156, 156);
+    color:rgb(156, 156, 156);
 }
 @media (max-width:768px) {
-	.contactFormCard {
-		width: 90%;
-	}
-	.contactFormCard h1 {
-		margin-left: 0rem;
-		font-size: 2.5rem
-	}
-	.Inputs {
-		margin-left: 1rem;
-		width: auto;
-		max-width: 100%;
-	}
-	.contactForm textarea {
-		height: 10rem;
-		width: 80%;
-		resize: none;
-	}
-	.sendBtn {
-		margin-left:1rem;
-	}
+    .contactFormCard {
+        width: 90%;
+    }
+    .contactFormCard h1 {
+        margin-left: 0rem;
+        font-size: 2.5rem
+    }
+    .Inputs {
+        margin-left: 1rem;
+        width: auto;
+        max-width: 100%;
+    }
+    .contactForm textarea {
+        height: 10rem;
+        width: 80%;
+        resize: none;
+    }
+    .sendBtn {
+        margin-left:1rem;
+    }
 }

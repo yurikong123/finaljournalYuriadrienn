@@ -1,5 +1,5 @@
 const PersonalData = {
-    firstName: "MY",
+    firstName: "IT'S MY",
     lastName: "JOURNAL",
     nickName:"<  Yurikong >",
     mobNo:"09514102129",

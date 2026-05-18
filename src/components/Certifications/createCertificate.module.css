@@ -9,7 +9,7 @@
     linear-gradient(145deg,purple, rgba(245,245,245,0.9));
   
   box-shadow:
-    0 12px 35px rgba(0,0,0,0.18),
+    0 12px 35px rgba(0, 0, 0, 0.18),
     inset 0 0 0 1px rgba(255,255,255,0.6);
 
   display: flex;
@@ -34,7 +34,7 @@
   right: -3rem;
   transform: rotate(45deg);
   background: linear-gradient(90deg, #d4af37, #f9e076);
-  color: #333;
+  color: #ffffff;
   font-size: 0.7rem;
   font-weight: 700;
   padding: 0.4rem 4rem;
@@ -112,4 +112,24 @@
     height: auto;
     padding: 1.6rem;
   }
+}
+
+/* TEXT */
+.certText {
+  text-align: center;
+  color: #ffffff !important; 
+}
+
+.certText h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.3rem;
+  color: #ffffff !important; /* Forces the main title to white */
+}
+
+.certText p {
+  font-size: 1.5rem;
+  opacity: 0.85; /* Slightly increased opacity so it's readable on the light gradient */
+  color: #ffffff !important; /* Forces the subtitle to white */
 }
